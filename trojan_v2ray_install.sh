@@ -1656,7 +1656,7 @@ function remove_v2ray(){
     rm -rf /usr/bin/v2ray /etc/v2ray
 
     green "================================"
-    red " 即将卸载 v2ray "
+    red " Desinstalar v2ray "
     green "================================"
 
 
@@ -1674,8 +1674,8 @@ function remove_v2ray(){
     crontab -r
 
     green "================================"
-    green "  v2ray 卸载完毕 !"
-    green "  crontab 定时任务 删除完毕 !"
+    green "  v2ray Desinstalado!"
+    green "  crontab La tarea programada eliminada !"
     green "================================"
 
 }
@@ -1746,54 +1746,54 @@ function start_menu(){
     clear
     getLinuxOSVersion
     green " ======================================="
-    green " Trojan V2ray 一键安装自动脚本 2020-6-10 更新  "
-    green " 系统：centos7+/debian9+/ubuntu16.04+"
-    green " 此脚本集成于 atrandys 和 波仔 "
+    green " Trojan V2ray - Actualizacion automatica 2020-6-10 "
+    green " Sistemas：centos7+/debian9+/ubuntu16.04+"
+    green " Este script está integrado en atrandys y bounce "
     green " ======================================="
-    blue " 声明："
-    red " *请不要在任何生产环境使用此脚本"
-    red " *请不要有其他程序占用80和443端口"
-    red " *若是已安装trojan或第二次使用脚本，请先执行卸载trojan"
-    green " ======================================="
-    echo
-    green " 1. 安装 BBR-PLUS 加速4合一脚本"
-    echo
-    green " 2. 安装 trojan 和 nginx 不支持CDN"
-    green " 3. 修复证书 并继续安装 trojan"
-    green " 4. 升级 trojan 到最新版本"
-    red " 5. 卸载 trojan 与 nginx"
-    echo
-    green " 6. 安装 trojan-go 和 nginx 支持websocket, 支持CDN, "
-    green " 7. 修复证书 并继续安装 trojan-go"
-    green " 8. 升级 trojan-go 到最新版本"
-    red " 9. 卸载 trojan-go 与 nginx"
-    echo
-    green " 11. 安装 v2ray 和 Caddy 1.0.5, 支持 websocket tls1.3, 支持CDN"
-    green " 12. 升级 v2ray 到最新版本"
-    red " 13. 卸载v2ray 和 Caddy 1.0.5"
-    echo
-    green " 14. 同时安装 trojan + v2ray 和 nginx, 不支持CDN"
-    green " 15. 升级 v2ray 和 trojan 到最新版本"    
-    red " 16. 卸载 trojan + v2ray 和 nginx"
-    echo
+    blue " Declaracion："
+    red " *No utilice este script en ningún entorno de producción."
+    red " *No tenga otros programas que ocupen los puertos 80 y 443."
+    red " *Si instaló un trojan o utilizó el script por segunda vez, desinstale trojan primero"
     green " ======================================="
     echo
-    green " 21. 安装OhMyZsh与插件zsh-autosuggestions, Micro编辑器 等软件"
-    green " 22. 设置可以使用root登陆"
-    green " 23. 修改SSH 登陆端口号"
+    green " 1. Instale BBR-PLUS para acelerar el script 4 en 1"
+    echo
+    green " 2. Instalar trojan y nginx no es compatible con CDN"
+    green " 3. Repare el certificado y continúe con la instalación de trojan"
+    green " 4. Actualizar trojan a la última versión"
+    red " 5. Desinstalar trojan y nginx"
+    echo
+    green " 6. Instale trojan-go y nginx soporte websocket, soporte CDN, "
+    green " 7. Repare el certificado y continúe instalando trojan-go"
+    green " 8. Actualice trojan-go a la última versión"
+    red " 9. Desinstalar trojan-go y nginx"
+    echo
+    green " 11. Instale v2ray y Caddy 1.0.5, soporte websocket tls1.3, soporte CDN"
+    green " 12. Actualice v2ray a la última versión"
+    red " 13. Desinstalar v2ray y Caddy 1.0.5"
+    echo
+    green " 14. Instale trojan + v2ray y nginx al mismo tiempo, no se admite CDN"
+    green " 15. Actualice v2ray y trojan a la última versión"    
+    red " 16. Desinstalar trojan + v2ray y nginx"
     echo
     green " ======================================="
     echo
-    green " 以下是 VPS 测网速工具"
-    red " 脚本测速会大量消耗 VPS 流量，请悉知！"
-    green " 31. superspeed 三网纯测速 （全国各地三大运营商部分节点全面测速）"
-    green " 32. ZBench 综合网速测试  （包含节点测速, Ping 以及 路由测试）"
-	green " 33. testrace 回程路由  （四网路由测试）"
-	green " 34. LemonBench 快速全方位测试 （包含CPU内存性能、回程、速度）"
+    green " 21. Instale OhMyZsh y plug-in zsh-autosuggestions, Micro editor y otro software"
+    green " 22. La configuración puede usar el inicio de sesión root"
+    green " 23. Modificar el número de puerto de inicio de sesión SSH"
+    echo
+    green " ======================================="
+    echo
+    green " La siguiente es la herramienta de medición de velocidad de red VPS"
+    red " La medición de la velocidad del script consumirá mucho tráfico VPS, ¡tenga en cuenta!"
+    green " 31. superspeed Medición de velocidad pura de tres redes (algunos nodos de los tres operadores principales en todo el país medición de velocidad integral）"
+    green " 32. ZBench Prueba integral de velocidad de red (incluyendo prueba de velocidad de nodo, ping y prueba de enrutamiento）"
+	green " 33. testrace Enrutamiento de retorno (cuatro pruebas de enrutamiento de red）"
+	green " 34. LemonBench Pruebas rápidas y completas (incluido el rendimiento de la memoria de la CPU, la red de retorno, la velocidad）"
     echo    
-    green " 0. 退出脚本"
+    green " 0. Salir del script"
     echo
-    read -p "请输入数字:" menuInputNumber
+    read -p "Por favor ingrese el número:" menuInputNumber
     case "$menuInputNumber" in
         1 )
             bbr_boost_sh
@@ -1882,7 +1882,7 @@ function start_menu(){
         ;;
         * )
             clear
-            red "请输入正确数字"
+            red "Por favor ingrese el número correcto"
             sleep 1s
             start_menu
         ;;
